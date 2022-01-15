@@ -1,0 +1,7 @@
+{
+  "name": "fitstats",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
