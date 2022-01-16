@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "fitstats",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
