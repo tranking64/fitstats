@@ -1,0 +1,43 @@
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-end">
+        <ion-label>Nur Freunde anzeigen</ion-label>
+        <ion-toggle [(ngModel)]="showFriendsOnly"></ion-toggle>
+      </ion-col>
+    </ion-row>
+
+    <div *ngIf="showFriendsOnly; then thenBlock else elseBlock"></div>
+
+    <ng-template #thenBlock>
+      <ion-row *ngFor="let item of friends" class="rankings">
+        <ion-col size="2">
+          <b># {{ item.rank }}</b>
+        </ion-col>
+        <ion-col>
+          <span>{{ item.username }}</span>
+        </ion-col>
+        <ion-col size="4" class="ion-text-end">
+          <span>{{ item.score }} Pkt.</span>
+        </ion-col>
+      </ion-row>
+    </ng-template>
+
+    <ng-template #elseBlock>
+      <ion-row *ngFor="let item of users" class="rankings">
+        <ion-col size="2">
+          <b># {{ item.rank }}</b>
+        </ion-col>
+        <ion-col>
+          <span>{{ item.username }}</span>
+        </ion-col>
+        <ion-col size="4" class="ion-text-end">
+          <span>{{ item.score }} Pkt.</span>
+        </ion-col>
+      </ion-row>
+    </ng-template>
+
+  </ion-grid>
+
+</ion-content>

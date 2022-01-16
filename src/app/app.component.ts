@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@capacitor/storage';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+  constructor() {
+    this.initDarkMode();
+  }
+
+  async initDarkMode() {
+    const data = await Storage.get({ key: 'dark_mode' });
+
+    if(JSON.parse(data.value)) {
+      document.body.setAttribute('color-theme', 'dark');
+    }
+    else {
+      document.body.setAttribute('color-theme', 'light');
+    }
+  }
 }

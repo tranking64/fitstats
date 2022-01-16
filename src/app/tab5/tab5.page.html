@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <h2>dmnktrn</h2>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <span>Dunkles Design</span>
+      </ion-col>
+      <ion-col id="switch" class="ion-text-right">
+        <div *ngIf="darkTheme; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <ion-toggle checked="true" (ionChange)="callToggle()" color="primary"></ion-toggle>
+        </ng-template>
+        <ng-template #elseBlock>
+          <ion-toggle (ionChange)="callToggle()" color="primary"></ion-toggle>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink="/login">Logout</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
