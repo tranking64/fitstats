@@ -1,0 +1,35 @@
+<ion-content [forceOverscroll]="false">
+  <div id="container">
+    <div class="card">
+      <ion-icon name="chevron-back" routerLink="/forgot-pw" routerDirection="back"></ion-icon>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h1 class="ion-text-center">Passwort zurücksetzen</h1>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Code" type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Neues Passwort" type="password"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="Neues Passwort bestätigen" type="password"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button>Senden</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+

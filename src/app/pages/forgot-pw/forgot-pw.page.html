@@ -1,0 +1,26 @@
+<ion-content [forceOverscroll]="false">
+  <div id="container">
+    <div class="card">
+      <ion-icon name="chevron-back" routerLink="/login" routerDirection="back"></ion-icon>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h1 class="ion-text-center">Passwort zurücksetzen</h1>
+            <p class="ion-text-center">Gib deine E-Mail ein und erhalte einen Code, mit welchen du dein Passwort zurücksetzen kannst.</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input placeholder="E-Mail" type="email" [(ngModel)]="email"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button routerLink="/reset-pw">Senden</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+

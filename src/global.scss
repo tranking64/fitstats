@@ -24,3 +24,148 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// styles
+ion-content {
+  font-size: 14px;
+  --background: var(--ion-color-light);
+
+  ion-grid {
+    margin-top: 40px;
+  }
+}
+
+ion-grid {
+  width: 95%;
+
+  ion-button {
+    font-size: 14px;
+    --border-radius: 15px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .card {
+    height: 60px;
+    border-radius: 15px;
+  }
+}
+
+#container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .card {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background-color: var(--ion-color-light);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+
+    ion-grid {
+      margin-top: 0 !important;
+    }
+
+    a {
+      margin-top: 3px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+  }
+
+  ion-icon {
+    color: var(--ion-color-dark);
+    margin-left: 12px;
+    font-size: 30px;
+  }
+}
+
+ion-input {
+  --padding-start: 10px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: start;
+  border-radius: 15px;
+  height: 40px;
+  margin-bottom: 3px;
+}
+
+ion-datetime {
+  height: auto;
+  width: auto;
+
+  max-width: 350px;
+}
+
+ion-modal {
+  --width: 290px;
+  --height: 382px;
+  --border-radius: 15px;
+}
+
+ion-modal ion-datetime {
+  height: 382px;
+}
+
+.input-box {
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 40px;
+  margin-bottom: 3px;
+
+  ion-select {
+    font-size: 14px;
+    padding: 0px 15px 0px 10px;
+    height: 100%;
+  }
+}
+
+// colors
+body[color-theme="light"] {
+  ion-input {
+    --background: white;
+  }
+
+  .input-box {
+    background-color: white;
+
+    ion-select {
+      --placeholder-opacity: 0.5;
+    }
+  }
+
+  ion-grid {
+    .card {
+      background-color: white;
+    }
+  }
+}
+
+body[color-theme="dark"] {
+  ion-tab-bar {
+    --background: #252627;
+  }
+
+  ion-input {
+    --background: #3a3c3d;
+  }
+
+  .input-box {
+    background-color: #3a3c3d;
+
+    ion-select {
+      --placeholder-color: white;
+      --placeholder-opacity: 0.6;
+    }
+  }
+
+  ion-grid {
+    .card {
+      background-color: var(--ion-color-medium);
+    }
+  }
+}
