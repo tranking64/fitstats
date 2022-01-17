@@ -1,10 +1,40 @@
-<ion-content>
+<ion-content forceOverscroll="false">
   <ion-grid>
     <ion-row>
       <ion-col>
         <div>
-          <h1>Hallo, dmnktrn</h1>
+          <h1>{{ getGreeting() }}, dmnktrn</h1>
           <p>Hier ist deine heutige Übersicht</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="weight-box" size="4">
+        <div>
+          <span>Aktueller Rang:</span>
+          <h1>#63</h1>
+          <span>Aktuelle Punkte:</span>
+          <h2>32231</h2>
+        </div>
+      </ion-col>
+      <ion-col class="weight-box">
+        <img src="../../assets//fitness_stats.svg">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="weight-box">
+        <img src="../../assets//tracker.svg">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="weight-box">
+        <p>Zu den Übungsstatistiken</p>
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+      </ion-col>
+      <ion-col class="weight-box" size="4">
+        <div>
+          <p class="ion-text-center">Aktuelles Gewicht</p>
+          <h1 class="ion-text-center">61kg</h1>
         </div>
       </ion-col>
     </ion-row>
@@ -15,10 +45,10 @@
       <ion-icon name="add-sharp"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button>
+      <ion-fab-button color="secondary">
         <ion-icon name="barbell-sharp"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button>
+      <ion-fab-button color="secondary">
         <ion-icon name="scale-sharp"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
