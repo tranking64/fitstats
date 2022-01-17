@@ -19,8 +19,6 @@ export class Tab5Page implements OnInit {
   async initDarkMode() {
     const data = await Storage.get({ key: 'dark_mode' });
 
-    console.log(JSON.parse(data.value));
-
     if(JSON.parse(data.value)) {
       this.darkTheme = true;
       document.body.setAttribute('color-theme', 'dark');

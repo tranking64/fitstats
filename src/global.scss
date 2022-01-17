@@ -29,7 +29,9 @@
 ion-content {
   font-size: 14px;
   --background: var(--ion-color-light);
+}
 
+.ios ion-content {
   ion-grid {
     margin-top: 40px;
   }
