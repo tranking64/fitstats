@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'reset-pw',
     loadChildren: () => import('./pages/reset-pw/reset-pw.module').then( m => m.ResetPwPageModule)
+  },
+  {
+    path: 'change-acc-details',
+    loadChildren: () => import('./pages/change-acc-details/change-acc-details.module').then( m => m.ChangeAccDetailsPageModule)
   }
 ];
 @NgModule({

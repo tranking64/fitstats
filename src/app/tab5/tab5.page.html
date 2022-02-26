@@ -13,39 +13,68 @@
         <h1>Konto</h1>
       </ion-col>
     </ion-row>
-    <ion-row class="box">
-      <ion-col>
-        <span>Kontodaten ändern</span>
-      </ion-col>
+    <ion-row>
+      <ion-card class="ion-activatable ripple-parent" routerLink="/change-acc-details">
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              <span>Kontodaten ändern</span>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-card>
     </ion-row>
-    <ion-row class="box">
-      <ion-col>
-        <span>Passwort ändern</span>
-      </ion-col>
+    <ion-row>
+      <ion-card class="ion-activatable ripple-parent">
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              <span>Passwort ändern</span>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-card>
     </ion-row>
-    <ion-row class="box">
-      <ion-col>
-        <span>Konto löschen</span>
-      </ion-col>
+    <ion-row>
+      <ion-card class="ion-activatable ripple-parent">
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              <span>Konto löschen</span>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-card>
     </ion-row>
     <ion-row>
       <ion-col>
         <h2>Präferenzen</h2>
       </ion-col>
     </ion-row>
-    <ion-row class="box">
-      <ion-col>
-        <span>Dunkles Design</span>
-      </ion-col>
-      <ion-col id="switch" class="ion-text-right">
-        <div *ngIf="darkTheme; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>
-          <ion-toggle checked="true" (ionChange)="callToggle()" color="primary"></ion-toggle>
-        </ng-template>
-        <ng-template #elseBlock>
-          <ion-toggle (ionChange)="callToggle()" color="primary"></ion-toggle>
-        </ng-template>
-      </ion-col>
+    <ion-row>
+      <ion-card>
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              <span>Dunkles Design</span>
+            </ion-col>
+            <ion-col id="switch">
+              <div class="ion-text-right">
+                <div *ngIf="darkTheme; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>
+                  <ion-toggle checked="true" (ionChange)="callToggle()" color="primary"></ion-toggle>
+                </ng-template>
+                <ng-template #elseBlock>
+                  <ion-toggle (ionChange)="callToggle()" color="primary"></ion-toggle>
+                </ng-template>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
     </ion-row>
     <ion-row>
       <ion-col>

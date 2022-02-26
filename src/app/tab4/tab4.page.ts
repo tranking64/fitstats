@@ -11,18 +11,18 @@ export class Tab4Page implements OnInit {
   showFriendsOnly = false;
 
   users: User[] = [
-    { rank: 1, username: 'very_gut', score: 2300 },
-    { rank: 2, username: 'Imprint6', score: 2090 },
-    { rank: 3, username: 'mauexe', score: 1900 },
-    { rank: 4, username: 'sleipn1r', score: 1860 },
-    { rank: 5, username: 'dmnktrn', score: 1500 },
-    { rank: 6, username: 'no2001ah', score: 1450 },
-    { rank: 7, username: 'aleggs', score: 1310 },
-    { rank: 8, username: 'AnnUber', score: 900 },
-    { rank: 9, username: 'Faithor', score: 860 },
-    { rank: 10, username: 'Declist', score: 500 },
-    { rank: 11, username: 'Laneo', score: 450 },
-    { rank: 12, username: 'Runninger', score: 310 },
+    { username: 'very_gut', score: 2300 },
+    { username: 'Imprint6', score: 2090 },
+    { username: 'mauexe', score: 1900 },
+    { username: 'sleipn1r', score: 1860 },
+    { username: 'dmnktrn', score: 1500 },
+    { username: 'no2001ah', score: 1450 },
+    { username: 'aleggs', score: 1310 },
+    { username: 'AnnUber', score: 900 },
+    { username: 'Faithor', score: 860 },
+    { username: 'Declist', score: 500 },
+    { username: 'Laneo', score: 450 },
+    { username: 'Runninger', score: 310 },
 
     /*{ rank: 8, username: 'very_gut', score: 1300 },
     { rank: 9, username: 'Imprint6', score: 1090 },
@@ -70,10 +70,10 @@ export class Tab4Page implements OnInit {
   ];
 
   friends: User[] = [
-    { rank: 1, username: 'very_gut', score: 1300 },
-    { rank: 2, username: 'no2001ah', score: 450 },
-    { rank: 3, username: 'Faithor', score: 860 },
-    { rank: 4, username: 'Declist', score: 500 }
+    { username: 'very_gut', score: 1300 },
+    { username: 'no2001ah', score: 1450 },
+    { username: 'Faithor', score: 860 },
+    { username: 'Declist', score: 500 }
   ] ;
 
   constructor() { }

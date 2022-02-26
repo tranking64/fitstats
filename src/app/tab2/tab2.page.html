@@ -12,9 +12,13 @@
     </ion-row>
     <ion-row *ngFor="let item of friends">
       <ion-col>
-        <div class="card">
+        <ion-card class="ion-activatable ripple-parent" (click)="test()">
+          <ion-card-content>{{ item.username }}</ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <!--<div class="card" (click)="test()">
           <span><b>{{ item.username }}</b></span>
-        </div>
+        </div>-->
       </ion-col>
     </ion-row>
   </ion-grid>

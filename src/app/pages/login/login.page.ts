@@ -17,6 +17,11 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  ionViewWillEnter() {
+    this.email = '';
+    this.password = '';
+  }
+
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Ungültige Daten',

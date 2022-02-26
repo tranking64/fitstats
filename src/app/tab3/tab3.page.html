@@ -10,35 +10,59 @@
     </ion-row>
 
     <ion-row>
-      <ion-col class="weight-box">
-        <img src="../../assets//tracker.svg">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Line Chart
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #lineCanvas style="position: relative; height:200px"></canvas>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col class="weight-box" size="4">
-        <div class="ion-text-center" >
-          <span>Aktueller Rang</span>
-          <h1>#5</h1>
-          <span>Punktanzahl</span>
-          <h2>1500</h2>
-        </div>
+      <ion-col size="4">
+        <ion-card class="ion-activatable ripple-parent">
+          <div class="ion-text-center">
+            <p>Aktueller Rang</p>
+            <h1>#5</h1>
+            <p>Punktanzahl</p>
+            <h2>1500</h2>
+          </div>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
       </ion-col>
-      <ion-col class="weight-box">
-        <img src="../../assets//fitness_stats.svg">
+      <ion-col>
+        <ion-card class="ion-activatable ripple-parent">
+          <img src="../../assets//fitness_stats.svg">
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col class="weight-box">
-        <p>Zu den Übungsstatistiken</p>
-        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+      <ion-col>
+        <ion-card class="ion-activatable ripple-parent">
+          <p class="ion-text-center">Zu den Übungsstatistiken</p>
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
       </ion-col>
-      <ion-col class="weight-box" size="5">
-        <div>
+      <ion-col size="5">
+        <ion-card id="trigger-click" class="ion-activatable ripple-parent">
           <p class="ion-text-center">Aktuelles Gewicht</p>
           <h1 class="ion-text-center">63kg</h1>
-        </div>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <ion-modal [swipeToClose]="true" class="myModal" trigger="trigger-click">
+          <ng-template>
+            <ion-content>
+              Weight
+            </ion-content>
+          </ng-template>
+        </ion-modal>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -48,7 +72,7 @@
       <ion-icon name="add-sharp"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button color="secondary">
+      <ion-fab-button color="secondary" (click)="add()">
         <ion-icon name="barbell-sharp"></ion-icon>
       </ion-fab-button>
       <ion-fab-button color="secondary">

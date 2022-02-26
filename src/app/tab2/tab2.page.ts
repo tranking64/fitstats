@@ -17,4 +17,8 @@ export class Tab2Page {
 
   constructor() {}
 
+  test() {
+    console.log('works');
+  }
+
 }

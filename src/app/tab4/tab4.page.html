@@ -14,9 +14,9 @@
     <div *ngIf="showFriendsOnly; then thenBlock else elseBlock"></div>
 
     <ng-template #thenBlock>
-      <ion-row *ngFor="let item of friends" class="rankings">
+      <ion-row *ngFor="let item of friends; index as rank" class="rankings">
         <ion-col size="2">
-          <b># {{ item.rank }}</b>
+          <b># {{ rank+1 }}</b>
         </ion-col>
         <ion-col>
           <span>{{ item.username }}</span>
@@ -28,9 +28,9 @@
     </ng-template>
 
     <ng-template #elseBlock>
-      <ion-row *ngFor="let item of users" class="rankings">
+      <ion-row *ngFor="let item of users; index as rank" class="rankings">
         <ion-col size="2">
-          <b># {{ item.rank }}</b>
+          <b># {{ rank+1 }}</b>
         </ion-col>
         <ion-col>
           <span>{{ item.username }}</span>
